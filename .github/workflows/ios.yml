@@ -20,13 +20,21 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true      
-      - run: xcodebuild test -project FlickrFindr.xcodeproj -scheme FlickrFindr -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' -enableCodeCoverage YES -derivedDataPath DerivedData
+      - run: | 
+          xcodebuild \
+            -project FlickrFindr.xcodeproj \
+            -scheme FlickrFindr \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' \
+            build \
+            test
       # - uses: michaelhenry/swifty-code-coverage@v1.0.0
       #   with:
       #     build-path: DerivedData
       #     target: FlickrFindr.app
       #     is-spm: false
-      - run: bash <(curl -s https://codecov.io/bash) -X xcodellvm
+      - run: bash <(curl -s https://codecov.io/bash)
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Upload coverage reports to Codecov
