@@ -20,10 +20,12 @@ jobs:
           bundler-cache: true
       - name: Run Tests
         run: bundle exec fastlane test
+      - name: Run Slather
+        run: bundle exec slather
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:
-          files: ./fastlane/test_output/report.junit,./fastlane/test_output/report.html
+          files: ./cobertura.xml
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   

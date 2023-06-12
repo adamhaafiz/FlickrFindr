@@ -1,0 +1,6 @@
+# .slather.yml
+
+xcodeproj: ./FlickrFindr.xcodeproj
+scheme: FlickrFindr
+coverage_service: cobertura_xml
+output_directory: ./
