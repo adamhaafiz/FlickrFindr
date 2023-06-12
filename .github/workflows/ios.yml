@@ -17,17 +17,19 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          bundler-cache: true
-      - name: Run Tests
-        run: bundle exec fastlane test
-      # - name: Run Slather
-      #   run: bundle exec slather
+          bundler-cache: true      
+      - run: xcodebuild test -project FlickrFindr.xcodeproj -scheme FlickrFindr -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2' -enableCodeCoverage YES -derivedDataPath DerivedData
+      - uses: michaelhenry/swifty-code-coverage@v1.0.0
+        with:
+          build-path: DerivedData
+          target: FlickrFindr.app
+          is-spm: false
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        with:
+        # with:
           # files: ./cobertura.xml
-          functionalities: fixes
-          swift: true
+          # functionalities: fixes
+          # swift: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   
