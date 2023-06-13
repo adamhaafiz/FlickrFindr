@@ -11,10 +11,12 @@
 		153C22CC29A4F383008FFB32 /* PhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C22CB29A4F383008FFB32 /* PhotoList.swift */; };
 		153C22CE29A4F386008FFB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 153C22CD29A4F386008FFB32 /* Assets.xcassets */; };
 		153C22D129A4F386008FFB32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 153C22D029A4F386008FFB32 /* Preview Assets.xcassets */; };
+		153C22DB29A4F387008FFB32 /* PhotoListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C22DA29A4F387008FFB32 /* PhotoListVMTests.swift */; };
 		153C22F429A5027C008FFB32 /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C22F329A5027C008FFB32 /* PhotoDetail.swift */; };
 		153C22F629A50BB2008FFB32 /* PhotoListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C22F529A50BB2008FFB32 /* PhotoListVM.swift */; };
 		153C22FE29A5148A008FFB32 /* PhotoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153C22FD29A5148A008FFB32 /* PhotoCard.swift */; };
 		E63F281A2A386FCB00F31A1E /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = E63F28192A386FCB00F31A1E /* Core */; };
+		E63F281C2A3870E000F31A1E /* MockPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63F281B2A3870E000F31A1E /* MockPhotoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +36,14 @@
 		153C22CD29A4F386008FFB32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		153C22D029A4F386008FFB32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		153C22D629A4F387008FFB32 /* FlickrFindrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrFindrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		153C22DA29A4F387008FFB32 /* PhotoListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListVMTests.swift; sourceTree = "<group>"; };
 		153C22F329A5027C008FFB32 /* PhotoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetail.swift; sourceTree = "<group>"; };
 		153C22F529A50BB2008FFB32 /* PhotoListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListVM.swift; sourceTree = "<group>"; };
 		153C22FD29A5148A008FFB32 /* PhotoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCard.swift; sourceTree = "<group>"; };
 		153C230F29A59993008FFB32 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		153C231029A599D2008FFB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E63F28172A386ED500F31A1E /* Core */ = {isa = PBXFileReference; lastKnownFileType = text; path = Core; sourceTree = SOURCE_ROOT; };
+		E63F281B2A3870E000F31A1E /* MockPhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		153C22D929A4F387008FFB32 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E63F281B2A3870E000F31A1E /* MockPhotoRepository.swift */,
+				153C22DA29A4F387008FFB32 /* PhotoListVMTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -242,6 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63F281C2A3870E000F31A1E /* MockPhotoRepository.swift in Sources */,
+				153C22DB29A4F387008FFB32 /* PhotoListVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
