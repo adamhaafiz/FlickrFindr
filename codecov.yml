@@ -38,3 +38,5 @@ coverage:
       default:
         target: 60%
         threshold: 20%
+comment:
+  layout: "header, diff, flags, components"

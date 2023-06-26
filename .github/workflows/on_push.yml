@@ -1,9 +1,7 @@
 name: on_push.yml
 
 on:
-  push:
-    branches:
-      - '**'
+  [push, pull_request]
 
 jobs:
   build:
